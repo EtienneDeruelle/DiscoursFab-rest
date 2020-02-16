@@ -17,6 +17,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.java.entity.Video;
 import com.java.service.impl.VideoConcatenateServiceImpl;
+import java.awt.AWTException;
+import java.io.IOException;
 
 
 @RunWith(MockitoJUnitRunner.class)
@@ -26,7 +28,7 @@ public class VideoConcatenateServiceTest {
 	private VideoConcatenateServiceImpl videoConcatenateService;
 	
 	@Test
-	public void itShouldConcatenateTwoVideo() {
+	public void itShouldConcatenateTwoVideo() throws IOException, InterruptedException, AWTException {
 		videoConcatenateService.concateneTwoVideo(new Video(), new Video());
 		fail();
 	}
